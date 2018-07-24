@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results!</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">Start Again!</a>
+    <br />
+    <p>Total Words: {{ count }}</p>
+    <p>Words:</p>
+    {% for word, total in sorted_words %}
+        {{ word }}- {{ total }}
+        <br />
+    {% endfor %}
+</body>
+</html>
